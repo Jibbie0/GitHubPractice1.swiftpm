@@ -17,7 +17,13 @@ struct HeaderView: View {
                 tasks.append(Task(nameOfTask: enteredString))
                 enteredString = ""
             } label: {
-                Text("Add")
+                ZStack {
+                    RoundedRectangle(cornerRadius: 10)
+                        .foregroundColor(.blue)
+                        .frame(width: 25, height: 10)
+                    Text("Add Item")
+                        .font(.title2)
+                }
             }
 
         }
