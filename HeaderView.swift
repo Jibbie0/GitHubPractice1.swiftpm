@@ -13,6 +13,8 @@ struct HeaderView: View {
     var body: some View {
         HStack {
             TextField("Add Item", text: $enteredString)
+                .padding()
+                .textFieldStyle(.roundedBorder)
             Button {
                 tasks.append(Task(nameOfTask: enteredString))
                 enteredString = ""
@@ -20,10 +22,12 @@ struct HeaderView: View {
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
                         .foregroundColor(.blue)
-                        .frame(width: 25, height: 10)
+                        .frame(width: 100, height: 35)
                     Text("Add Item")
-                        .font(.title2)
+                        .font(.title3)
+                        .foregroundColor(.black)
                 }
+                .padding()
             }
 
         }
